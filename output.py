@@ -18,12 +18,12 @@ while endprogram == False:
 
     if data == "disconnect": #ends program if a disconnect message is recieved
         endprogram = True
-    if data == "l":
+    if data == "a":
         m1 = 'r'
         m2 = 'r'
         m3 = 'f'
         m4 = 'f'
-    if data == "r":
+    if data == "d":
         m1 = 'f'
         m2 = 'f'
         m3 = 'r'
@@ -33,12 +33,12 @@ while endprogram == False:
         m2 = 'f'
         m3 = 'f'
         m4 = 'f'
-    if data == "b":
+    if data == "s":
         m1 = 'r'
         m2 = 'r'
         m3 = 'r'
         m4 = 'r'
-    elif (endprogram == False) & (data != 'r') & (data !='l') & (data !='w') & (data !='b'):
+    elif (endprogram == False) & (data != 'a') & (data !='d') & (data !='w') & (data !='s'):
         speed = 51*int(data) #scales speed input of 0-5 to 0-255 which represents pwm value
 
     print(f"[{m1}{speed}][{m2}{speed}][{m3}{speed}][{m4}{speed}]") #display motor configuration determined by speed and direction input
