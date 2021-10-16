@@ -30,7 +30,7 @@ while endprogram == False:
     else:
         try:
             speed = int(direction) #converts key pressed to int then writes it to variable speed
-            if speed <6:  # send speed to server if valid
+            if if (speed >=0) & (speed <6):  # send speed to server if valid:  # send speed to server if valid
                 send(str(speed))
         except:
             print ('')
