@@ -17,10 +17,10 @@ def send(input):
     client.send(data) #sends data to server
 
 while endprogram == False:
-    print("Enter a digit from 0-5 to choose the speed or l,r,b,w to go left, right, backward or forward respectivly or x to exit")
+    print("Enter a digit from 0-5 to choose the speed or a,d,s,w to go left, right, backward or forward respectivly or x to exit")
 
     direction = keyboard.read_key()  # reads key into direction variable
-    if (direction == "l") | (direction =="r") | (direction =="b") | (direction =="w") :  # determines if direction input is valid
+    if (direction == "d") | (direction =="a") | (direction =="s") | (direction =="w") :  # determines if direction input is valid
         validdirection = True
     if keyboard.read_key() == "x":  # if x then program ends and a disconnect message is sent to the server
         send("disconnect")
